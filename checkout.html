@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+    <link rel="stylesheet" href="./checkout.css">
+    <link rel="stylesheet" href="./mediaqueries.css">
+    <style>
+        /* Centering the product details and image */
+        #product-details {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        #product-image {
+            max-width: 300px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-top: 20px; /* Add some space above the image */
+            display: none; /* Initially hide the image */
+        }
+    </style>
+</head>
+<body>
+    <h1>Checkout Page</h1>
+    
+    <!-- Product details container -->
+    <div id="product-details">
+        <p id="product-name"></p>
+        <!-- Image element to display the product image dynamically -->
+        <img id="product-image" src="" alt="Product Image">
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; <span id="current-year"></span> Heritage Home. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Get the product name from the URL query parameter
+        const urlParams = new URLSearchParams(window.location.search);
+        const productName = urlParams.get('product');
+
+        // Display the product name on the checkout page
+        document.getElementById('product-name').textContent = `You are purchasing: ${productName}`;
+
+        // Map the product name to corresponding image paths
+        const productImages = {
+            'Bruna Cush Chair': './assets/Bruna Cush Chair.webp',
+            'Cruz Sofa': './assets/Cruz Sofa.webp',
+            'Back Board Chair': './assets/Back Board Chair.webp',
+            'Luxe Velvet Armchair': './assets/Luxe Velvet Armchair.webp',
+            'Vintage Oak Dining Table': './assets/Vintage Oak Dining Table.webp',
+            'Moderno Coffee Table': './assets/Moderno Coffee Table.webp'
+        };
+
+        // Set the product image source based on the product name
+        const productImage = document.getElementById('product-image');
+        if (productImages[productName]) {
+            productImage.src = productImages[productName]; // Set the correct image source
+            productImage.alt = productName; // Update the alt text
+            productImage.style.display = 'block'; // Show the image
+        }
+
+         // Script to dynamically set the current year
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>

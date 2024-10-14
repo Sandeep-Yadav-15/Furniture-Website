@@ -1,0 +1,196 @@
+/* General Media Queries for Responsive Design */
+
+/* Smartphones (portrait and landscape) */
+@media (max-width: 576px) {
+    body {
+        font-size: 14px; /* Slightly reduce text size */
+    }
+    
+    h1 {
+        font-size: 2rem; /* Smaller heading size */
+    }
+
+    #product-name {
+        font-size: 1rem;
+        padding: 0.5rem;
+    }
+
+    .nav-links {
+        display: none; /* Hide the navigation links */
+        flex-direction: column; /* Stack links vertically */
+        position: absolute;
+        top: 4rem;
+        right: 1rem;
+        background-color: #f0e6d6; /* Same as nav background */
+        width: 200px;
+        padding: 1rem;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        z-index: 999;
+    }
+
+    .nav-links.show {
+        display: flex; /* Show the menu when toggled */
+    }
+
+    .hamburger {
+        display: flex; /* Show the hamburger icon */
+        flex-direction: column;
+        justify-content: space-between;
+        cursor: pointer;
+    }
+
+    .hamburger .line {
+        width: 25px;
+        height: 3px;
+        background-color: #7d7a5d; /* Icon color */
+        border-radius: 5px;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .showMedium {
+        grid-template-columns: 1fr; /* One column layout */
+        gap: 1.5rem;
+    }
+
+    .section h2 {
+        font-size: 1.8rem;
+    }
+    
+    .service-content {
+        grid-template-columns: 1fr; /* Stack services vertically */
+        padding: 1rem;
+    }
+
+    .info-grid {
+        grid-template-columns: 1fr;
+    }
+
+    #search input[type="text"] {
+        width: 100%; /* Expand search bar to full width */
+    }
+}
+
+/* Tablets (portrait and landscape) */
+@media (min-width: 577px) and (max-width: 768px) {
+    body {
+        font-size: 16px;
+    }
+
+    h1 {
+        font-size: 2.2rem; /* Larger heading size than mobile */
+    }
+
+    #product-name {
+        font-size: 1.3rem;
+        padding: 1rem;
+    }
+
+    .showMedium {
+        grid-template-columns: repeat(2, 1fr); /* Two columns on tablets */
+    }
+
+    .section h2 {
+        font-size: 2rem;
+    }
+
+    .service-content {
+        grid-template-columns: repeat(2, 1fr); /* Two service items per row */
+    }
+
+    .info-grid {
+        grid-template-columns: repeat(2, 1fr); /* Two columns for product info */
+    }
+
+    #search input[type="text"] {
+        width: 90%; /* Limit search bar width */
+    }
+}
+
+/* Large Tablets and Small Laptops (landscape) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    body {
+        font-size: 18px; /* Larger text for better readability */
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    #product-name {
+        font-size: 1.5rem;
+        padding: 1.2rem;
+    }
+
+    .showMedium {
+        grid-template-columns: repeat(3, 1fr); /* Three columns */
+    }
+
+    .section h2 {
+        font-size: 2.2rem;
+    }
+
+    .service-content {
+        grid-template-columns: repeat(3, 1fr); /* Three service items per row */
+    }
+
+    .info-grid {
+        grid-template-columns: repeat(3, 1fr); /* Three columns for product info */
+    }
+
+    #search input[type="text"] {
+        width: 80%;
+    }
+}
+
+/* Desktops and Larger Devices */
+@media (min-width: 1025px) {
+    body {
+        font-size: 20px; /* Default larger size for bigger screens */
+    }
+
+    h1 {
+        font-size: 2.8rem; /* Larger headings for bigger screens */
+    }
+
+    #product-name {
+        font-size: 1.6rem;
+        padding: 1.5rem;
+    }
+
+    .showMedium {
+        grid-template-columns: repeat(3, 1fr); /* Three-column grid */
+    }
+
+    .section h2 {
+        font-size: 2.5rem; /* Larger section titles */
+    }
+
+    .service-content {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .info-grid {
+        grid-template-columns: repeat(3, 1fr); /* Three-column layout */
+    }
+
+    #search input[type="text"] {
+        width: 60%; /* Smaller width for larger screens */
+    }
+}
+
+/* Custom Scrollbar Styling for All Devices */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #6a5a4d;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #4e4436;
+}

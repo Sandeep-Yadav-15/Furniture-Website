@@ -1,0 +1,42 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif; /* Modern font */
+    background-color: #f9f5ee; /* Soft background color */
+    color: #5c5047; /* Dark brown text color */
+    margin: 0;
+    padding: 0;
+    line-height: 1.6; /* Better readability */
+}
+
+/* Checkout Page Styles */
+h1 {
+    text-align: center; /* Center align heading */
+    font-size: 2.5rem; /* Large font size */
+    color: #6a5a4d; /* Header color */
+    margin-bottom: 1rem; /* Space below header */
+}
+
+#product-name {
+    text-align: center; /* Center align product name */
+    font-size: 1.5rem; /* Larger font size */
+    margin: 2rem auto; /* Space above and below */
+    max-width: 600px; /* Limit width for better readability */
+    padding: 1rem; /* Padding around text */
+    background-color: #e3d8c6; /* Light taupe background */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+}
+
+
+/* Adding a Footer */
+footer {
+    text-align: center; /* Center align footer */
+    margin-top: 3rem; /* Space above footer */
+    padding: 1rem; /* Padding for footer */
+    background-color: #6a5a4d; /* Dark footer background */
+    color: white; /* White text color for contrast */
+}
+
+footer p {
+    margin: 0; /* Remove default margin */
+}

@@ -1,0 +1,773 @@
+/* General Styles */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    /* background-color: #f4f4f9; */
+    background-color: #f2ebe3;
+    /* color: #333; */
+    color: #5c5047; 
+    line-height: 1.6;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* Navigation Bar */
+nav {
+    width: 100%;
+    height: 4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f0e6d6;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+h2 {
+    font-size: 1.8rem;
+    color: #7d7159;
+    text-transform: uppercase;
+}
+
+.nav-links a {
+    color: #5c5047;
+    text-decoration: none; /* Removes underline from links */
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #4e4436; /* Slightly darker brown on hover */
+    text-decoration: underline;
+}
+
+ul {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+ul li {
+    cursor: pointer;
+}
+
+/* Hamburger Menu */
+.hamburger {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 2rem;
+    width: 2rem;
+}
+
+.hamburger .line {
+    height: 0.3rem;
+    background-color: #7d7a5d;
+    border-radius: 5px;
+}
+
+/* Hero Section */
+.ShowDesign {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 0;
+    /* background-color: #eaeaea; */
+    background-color: #efe4cc;
+    border-radius: 0 0 40px 40px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.left {
+    flex: 1;
+    padding: 1rem;
+}
+
+.right {
+    flex: 1;
+    text-align: center;
+}
+
+.left h1 {
+    font-size: 2.5rem;
+    color: #6a5a4d;
+    margin-bottom: 1rem;
+}
+
+.left p {
+    font-size: 1.2rem;
+    color: #7d7159;
+    margin-bottom: 2rem;
+}
+.chair {
+    width: 80%;
+    border-radius: 20px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+}
+
+.chair:hover {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
+    transform: translateY(-8px);
+    cursor: pointer;
+  }
+
+/* Discover More Button Styling */
+#btn {
+    background-color: #8b7257; /* Primary button color */
+    color: white; /* Text color */
+    border: none; /* Remove border */
+    padding: 0.75rem 1.5rem; /* Button padding */
+    font-size: 1.2rem; /* Font size */
+    border-radius: 8px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transitions */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Soft shadow */
+}
+
+/* Button Hover Effect */
+#btn:hover {
+    background-color: #5e4531; /* Darker shade on hover */
+    transform: translateY(-3px); /* Lift effect */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Enhanced shadow */
+}
+
+
+.caption {
+    font-size: 1rem;
+    margin-top: 0.5rem;
+    text-align: center;
+    font-style: italic;
+}
+
+/* Discover More Section - Initially Hidden */
+#more-info.hidden {
+    display: none; /*Hide the section initially*/
+}
+
+#more-info{
+    padding: 2rem;
+    /* background-color: #f9f5ee; */
+    background-color: #f5ecdfe7;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+#more-info h2{
+    text-align: center;
+    color: #6a5a4d;
+    margin-bottom: 1.5rem;
+}
+
+.info-grid {
+    display: grid;
+    /* grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); */
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+.info-item {
+    text-align: center;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect */
+.info-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.info-item:nth-child(1) {
+    background-color: #f2e3d5; /* Soft beige for Quality Craftsmanship */
+}
+
+.info-item:nth-child(2) {
+    background-color: #e3d8c6; /* Light taupe for Custom Designs */
+}
+
+.info-item:nth-child(3) {
+    background-color: #d8e0c7; /* Soft green for Sustainable Materials */
+}
+
+.info-item:nth-child(4) {
+    background-color: #ebe3dc; /* Light warm brown for Timeless Designs */
+}
+
+.info-item:nth-child(5) {
+    background-color: #e4e0d9; /* Neutral gray for Customer Satisfaction */
+}
+
+.info-item:nth-child(6) {
+    background-color: #e0d8d1; /* Soft neutral beige for Expert Delivery and Assembly */
+}
+
+
+/* Image Styling */
+.info-item img{
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Paragraph Text Styling */
+.info-item:nth-child(1) p {
+    color: #5e4531; /* Darker brown for Quality Craftsmanship */
+}
+
+.info-item:nth-child(2) p {
+    color: #6a5a4d; /* Medium brown for Custom Designs */
+}
+
+.info-item:nth-child(3) p {
+    color: #4a5e38; /* Dark green for Sustainable Materials */
+}
+
+.info-item:nth-child(4) p {
+    color: #5c4a3e; /* Darker warm brown for Timeless Designs */
+}
+
+.info-item:nth-child(5) p {
+    color: #5d5a55; /* Darker neutral grey for Customer Satisfaction */
+}
+
+.info-item:nth-child(6) p {
+    color: #5e5048; /* Soft grey-brown for Expert Delivery and Assembly */
+}
+
+.info-item p {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+
+/* Service Section */
+
+.section {
+    padding: 4rem 0;
+    background-color: #f6f0e1;
+    border-radius: 12px; /* Rounded corners */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    margin-bottom: 2rem; /* Space between sections */
+    margin-top: 2rem;
+}
+
+.section h2 {
+    text-align: center;
+    font-size: 2.2rem;
+    color: #6a5a4d;
+    margin-bottom: 2rem;
+}
+
+.service-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 0 2rem;
+}
+
+.service-item {
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Custom Furniture Design - Warm wood tones */
+.service-item:nth-child(1) {
+    background-color: #e9d3b5; /* Light warm beige/wood tone */
+}
+
+/* Consultation and Space Planning - Soft, clean white */
+.service-item:nth-child(2) {
+    background-color: #f4f4f4; /* Light grey/white for clean look */
+}
+
+/* Delivery and Installation - Neutral beige */
+.service-item:nth-child(3) {
+    background-color: #ede3cc; /* Neutral light beige */
+}
+
+/* Repair and Maintenance - Light grey */
+.service-item:nth-child(4) {
+    background-color: #e0dcd7; /* Light grey to reflect the professional nature */
+}
+
+/* Eco-Friendly Materials - Soft green tones */
+.service-item:nth-child(5) {
+    background-color: #d8e0c7; /* Soft green to represent eco-friendly services */
+}
+
+/* Custom Furniture Design - Darker brown for contrast */
+.service-item:nth-child(1) .caption {
+    color: #5e4531; /* Darker brown to contrast with light beige background */
+}
+
+/* Consultation and Space Planning - Medium gray for clarity */
+.service-item:nth-child(2) .caption {
+    color: #6b6b6b; /* Medium gray to contrast with the white background */
+}
+
+/* Delivery and Installation - Darker beige for readability */
+.service-item:nth-child(3) .caption {
+    color: #4e4436; /* Darker beige for easy readability */
+}
+
+/* Repair and Maintenance - Darker gray for contrast */
+.service-item:nth-child(4) .caption {
+    color: #5c5047; /* Darker grey to contrast with the light grey background */
+}
+
+/* Eco-Friendly Materials - Dark green to match eco-theme */
+.service-item:nth-child(5) .caption {
+    color: #4a5e38; /* Dark green to complement the eco-friendly background */
+}
+
+.service-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.service-item h3 {
+    font-size: 1.8rem;
+    /* color: #6a5a4d;  */
+    margin-bottom: 1rem;
+}
+
+.service-item p {
+    font-size: 1rem;
+    /* color: #7d7159; */
+    margin-bottom: 1.5rem;
+}
+
+.service-item h3, .service-item p {
+    text-align: center;
+}
+
+/* Custom Furniture Design - Warm dark brown for headings and softer brown for text */
+.service-item:nth-child(1) h3 {
+    color: #5e4531; /* Darker brown for heading */
+}
+.service-item:nth-child(1) p {
+    color: #7b6550; /* Softer brown for paragraph */
+}
+
+/* Consultation and Space Planning - Medium gray for headings and lighter gray for text */
+.service-item:nth-child(2) h3 {
+    color: #4e4e4e; /* Medium gray for heading */
+}
+.service-item:nth-child(2) p {
+    color: #7a7a7a; /* Lighter gray for paragraph */
+}
+
+/* Delivery and Installation - Darker beige for headings and softer beige for text */
+.service-item:nth-child(3) h3 {
+    color: #4e4436; /* Darker beige for heading */
+}
+.service-item:nth-child(3) p {
+    color: #7d7159; /* Softer beige for paragraph */
+}
+
+/* Repair and Maintenance - Darker gray for headings and softer gray for text */
+.service-item:nth-child(4) h3 {
+    color: #5c5047; /* Darker gray for heading */
+}
+.service-item:nth-child(4) p {
+    color: #7d7d7d; /* Softer gray for paragraph */
+}
+
+/* Eco-Friendly Materials - Dark green for headings and softer green for text */
+.service-item:nth-child(5) h3 {
+    color: #4a5e38; /* Dark green for heading */
+}
+.service-item:nth-child(5) p {
+    color: #7b8a6a; /* Softer green for paragraph */
+}
+
+.service-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.caption {
+    font-size: 1rem;
+    color: #7d7a5d;
+    margin-top: 0.5rem;
+    text-align: center;
+    font-style: italic;
+}
+
+/* Product Section */
+#product {
+    background-color: #f5eed1; /* Light creamy beige */
+    padding: 4rem 0; /* Added padding for better spacing */
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+}
+
+#product h2, #store h2, #search h2 {
+    font-size: 2.2rem;
+    color: #6a5a4d; /* Consistent font color for headings */
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+#product p, #store p, #search p {
+    color: #7d7159; /* Softer brown for text */
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto 2rem auto;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+/* ShowMedium Grid Layout */
+.showMedium {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    grid-template-rows: repeat(2, auto); /* 2 rows */
+    gap: 2rem; /* Space between grid items */
+    padding: 2rem 0;
+    justify-items: center; /* Center the product items horizontally */
+}
+
+/* Individual Product Styling */
+.showMedium > div {
+    background-color: white; /* Default background, overridden below */
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Specific Background Colors */
+.showMedium > div:nth-child(1) {
+    background-color: #f3e6d4; /* Bruna Cush Chair - Light Beige */
+}
+
+.showMedium > div:nth-child(2) {
+    background-color: #e9d8c0; /* Cruz Sofa - Warm Beige-Brown */
+}
+
+.showMedium > div:nth-child(3) {
+    background-color: #e0dbd5; /* Back Board Chair - Soft Grey */
+}
+
+.showMedium > div:nth-child(4) {
+    background-color: #d4c4c0; /* Luxe Velvet Armchair - Deep Burgundy */
+}
+
+.showMedium > div:nth-child(5) {
+    background-color: #c9b59e; /* Vintage Oak Dining Table - Medium Brown */
+}
+
+.showMedium > div:nth-child(6) {
+    background-color: #d1d1d1; /* Moderno Coffee Table - Light Grey */
+}
+
+/* Hover Effects */
+.showMedium > div:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Product Images */
+.showMedium img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+/* Info Section */
+.showMedium .info h4 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.showMedium .info b {
+    font-size: 1rem;
+    color: #4e4b39;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+/* Product Descriptions */
+.product .description {
+    margin-top: 0.5rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    text-align: justify;
+}
+
+/* Text Colors Based on Background */
+.showMedium > div:nth-child(1) .info {
+    color: #5e4531; /* Dark Brown for Bruna Cush Chair */
+}
+
+.showMedium > div:nth-child(2) .info {
+    color: #4e4436; /* Medium Dark Brown for Cruz Sofa */
+}
+
+.showMedium > div:nth-child(3) .info {
+    color: #3e3e3e; /* Dark Grey for Back Board Chair */
+}
+
+.showMedium > div:nth-child(4) .info {
+    color: #3a2f2c; /* Dark Burgundy for Luxe Velvet Armchair */
+}
+
+.showMedium > div:nth-child(5) .info {
+    color: #4a4037; /* Dark Brown for Vintage Oak Dining Table */
+}
+
+.showMedium > div:nth-child(6) .info {
+    color: #2f2f2f; /* Dark Grey for Moderno Coffee Table */
+}
+
+/* Buy Now Button Styling */
+.btn {
+    border: none; /* Remove borders */
+    padding: 0.75rem 1.5rem; /* Padding for button */
+    font-size: 1.1rem; /* Font size */
+    border-radius: 8px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transitions */
+    margin-top: 1rem; /* Space above the button */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+}
+
+/* Buy Now Button Styling for Bruna Cush Chair */
+.showMedium > div:nth-child(1) .btn {
+    background-color: #5e4531; /* Darker shade of the Light Beige background */
+    color: white; /* White text color for contrast */
+}
+
+.showMedium > div:nth-child(1) .btn:hover {
+    background-color: #4b3a2a; /* Slightly darker hover color */
+}
+
+/* Buy Now Button Styling for Cruz Sofa */
+.showMedium > div:nth-child(2) .btn {
+    background-color: #4e4436; /* Dark Brown to contrast with Beige-Brown */
+    color: white; /* White text color for contrast */
+}
+
+.showMedium > div:nth-child(2) .btn:hover {
+    background-color: #3d372d; /* Slightly darker hover color */
+}
+
+/* Buy Now Button Styling for Back Board Chair */
+.showMedium > div:nth-child(3) .btn {
+    background-color: #3e3e3e; /* Dark Grey to contrast with Soft Grey */
+    color: white; /* White text color for contrast */
+}
+
+.showMedium > div:nth-child(3) .btn:hover {
+    background-color: #2c2c2c; /* Slightly darker hover color */
+}
+
+/* Buy Now Button Styling for Luxe Velvet Armchair */
+.showMedium > div:nth-child(4) .btn {
+    background-color: #3a2f2c; /* Dark Burgundy to complement the background */
+    color: white; /* White text color for contrast */
+}
+
+.showMedium > div:nth-child(4) .btn:hover {
+    background-color: #2b2220; /* Slightly darker hover color */
+}
+
+/* Buy Now Button Styling for Vintage Oak Dining Table */
+.showMedium > div:nth-child(5) .btn {
+    background-color: #4a4037; /* Dark Brown to complement the Medium Brown */
+    color: white; /* White text color for contrast */
+}
+
+.showMedium > div:nth-child(5) .btn:hover {
+    background-color: #3a312a; /* Slightly darker hover color */
+}
+
+/* Buy Now Button Styling for Moderno Coffee Table */
+.showMedium > div:nth-child(6) .btn {
+    background-color: #2f2f2f; /* Dark Grey to complement the Light Grey */
+    color: white; /* White text color for contrast */
+}
+
+.showMedium > div:nth-child(6) .btn:hover {
+    background-color: #1f1f1f; /* Slightly darker hover color */
+}
+
+
+
+
+
+/* Store Section */
+#store {
+    background-color: #f5eed1; /* Light creamy beige background */
+    padding: 4rem 2rem; /* Padding for spacing */
+    border-radius: 12px; /* Rounded corners */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    text-align: center; /* Center-align all text and content */
+    margin-bottom: 2rem; /* Space below the section */
+}
+
+#store h2 {
+    font-size: 2.2rem;
+    color: #6a5a4d; /* Dark warm brown for heading */
+    margin-bottom: 1rem;
+    text-transform: uppercase; /* Uppercase for title */
+    letter-spacing: 1px; /* Slight letter-spacing */
+}
+
+#store p {
+    font-size: 1.1rem;
+    color: #7d7159; /* Softer brown for paragraph text */
+    line-height: 1.8;
+    margin-bottom: 2rem;
+    max-width: 800px; /* Restrict paragraph width for readability */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#store img {
+    width: 100%;
+    max-width: 600px; /* Restrict image size */
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Soft shadow around image */
+    margin-top: 2rem; /* Space between paragraph and image */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add hover effects */
+}
+
+#store img:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Deeper shadow on hover */
+}
+
+/* Search Section*/
+#search {
+    background-color: #f3e8d1; /* Soft, neutral background color */
+    padding: 4rem 2rem; /* Padding for spacing */
+    border-radius: 12px; /* Rounded corners */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    margin-bottom: 2rem; /* Space below the section */
+    text-align: center; /* Center-align all text */
+}
+
+#search h2 {
+    font-size: 2.2rem; /* Font size for heading */
+    color: #6a5a4d; /* Dark warm brown color */
+    margin-bottom: 1rem; /* Space below the heading */
+    text-transform: uppercase; /* Uppercase for emphasis */
+}
+
+#search p {
+    font-size: 1.1rem; /* Font size for paragraph text */
+    color: #7d7159; /* Softer brown for paragraph text */
+    line-height: 1.8; /* Increased line height for readability */
+    margin-bottom: 2rem; /* Space below the paragraph */
+    max-width: 800px; /* Restrict paragraph width for readability */
+    margin-left: auto; /* Center align the text */
+    margin-right: auto; /* Center align the text */
+}
+
+#search input[type="text"] {
+    width: 80%; /* Width of the search input */
+    max-width: 400px; /* Max width to prevent stretching */
+    padding: 0.75rem 1.5rem; /* Padding for input */
+    font-size: 1rem; /* Font size */
+    border: 1px solid #c0b4a3; /* Light border for input */
+    border-radius: 5px; /* Rounded corners */
+    outline: none; /* Remove outline on focus */
+    transition: border-color 0.3s ease; /* Transition for border color on focus */
+}
+
+#search input[type="text"]:focus {
+    border-color: #6a5a4d; /* Darker border color on focus */
+    box-shadow: 0 0 5px rgba(106, 90, 77, 0.5); /* Soft shadow on focus */
+}
+
+
+
+
+
+/* Footer Section */
+footer {
+    /* background-color: #f8f8f8; */
+    background-color: #e5d4bb;
+    padding: 2rem 0;
+    text-align: center;
+}
+
+footer ul {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+footer ul li {
+    font-size: 1rem;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+footer ul li a {
+    color: #5c5047;
+    text-decoration: none; /* Remove underline from links */
+    transition: color 0.3s ease;
+}
+
+footer ul li a:hover {
+    color: #4c4132;
+    text-decoration: underline;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 12px; /* Width of the scrollbar */
+    height: 12px; /* Height of the scrollbar */
+}
+
+/* Scrollbar Track */
+::-webkit-scrollbar-track {
+    background: #f0e6d6; /* Color of the track (background of scrollbar) */
+    border-radius: 10px; /* Rounded corners for the track */
+}
+
+/* Scrollbar Thumb */
+::-webkit-scrollbar-thumb {
+    background: #6a5a4d; /* Color of the thumb (the draggable part of the scrollbar) */
+    border-radius: 10px; /* Rounded corners for the thumb */
+}
+
+/* Scrollbar Thumb on Hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #4e4436; /* Darker shade when hovering over the thumb */
+}
